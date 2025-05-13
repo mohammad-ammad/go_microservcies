@@ -4,11 +4,11 @@ import (
 	"errors"
 	"time"
 
-	"github.com/mohammad-ammad/auth-service/config"
-	"github.com/mohammad-ammad/auth-service/models"
-	"github.com/mohammad-ammad/auth-service/dto"
-	"golang.org/x/crypto/bcrypt"
 	"github.com/golang-jwt/jwt/v5"
+	"github.com/mohammad-ammad/auth-service/config"
+	"github.com/mohammad-ammad/auth-service/dto"
+	"github.com/mohammad-ammad/auth-service/models"
+	"golang.org/x/crypto/bcrypt"
 )
 
 func CreateUser(req dto.RegisterRequest) error {
@@ -45,8 +45,9 @@ func AuthenticateUser(req dto.LoginRequest) (string, error) {
 	}
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
-		"user_id": user.ID,
-		"exp":     time.Now().Add(time.Hour).Unix(),
+		"user_id":  user.ID,
+		"username": user.Username,
+		"exp":      time.Now().Add(time.Hour).Unix(),
 	})
 
 	tokenString, err := token.SignedString([]byte(config.Env("JWT_SECRET", "secret")))
