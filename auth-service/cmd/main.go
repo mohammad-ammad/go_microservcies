@@ -15,5 +15,5 @@ func main() {
 	r := gin.Default()
 	routes.RegisterRoutes(r)
 
-	r.Run(":" + config.Env("PORT", "8080")) // start server
+	r.Run(":" + config.Env("PORT", "8080"))
 }
