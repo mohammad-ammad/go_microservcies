@@ -567,8 +567,10 @@ The persistence-service does not expose HTTP endpoints but listens to Kafka mess
 
 This includes the correct `curl` command for the `ws-service` using the WebSocket URL with a token query parameter.This includes the correct `curl` command for the `ws-service` using the WebSocket URL with a token query parameter.
 
+```
 ## Output
 ![client1](screenshots/client1.png)
 ![client2](screenshots/client2.png)
 ![db](screenshots/db.png)
 ![Kafka](screenshots/kafka.png)
+```
