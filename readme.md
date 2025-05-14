@@ -550,13 +550,6 @@ kubectl apply -f persistence-k8s.yaml
    curl -i -N -H "Connection: Upgrade" -H "Upgrade: websocket" \
    "ws://localhost:8001/ws?token=<TOKEN>"
    ```
-
-   Example:
-   ```bash
-   curl -i -N -H "Connection: Upgrade" -H "Upgrade: websocket" \
-   "ws://localhost:8001/ws?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDcyMzcxMjksInVzZXJfaWQiOjIsInVzZXJuYW1lIjoiYW1tYWQifQ.x0LXqHi-2FuBbVTk-Bnewa-ru-MjiSWdgpCepvK7Kgg"
-   ```
-
 ---
 
 ### persistence-service
@@ -573,3 +566,9 @@ The persistence-service does not expose HTTP endpoints but listens to Kafka mess
 ```
 
 This includes the correct `curl` command for the `ws-service` using the WebSocket URL with a token query parameter.This includes the correct `curl` command for the `ws-service` using the WebSocket URL with a token query parameter.
+
+## Output
+![client1](screenshots/client1.png)
+![client2](screenshots/client2.png)
+![db](screenshots/db.png)
+![Kafka](screenshots/kafka.png)
