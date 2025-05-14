@@ -170,42 +170,6 @@ kubectl apply -f persistence-k8s.yaml
 - Kafka topics are automatically created as per the configuration.
 - Use Kafka UI (available at `http://localhost:8080`) to monitor Kafka topics and messages.
 
-```
-
-biktertech: also add how to run unit test and also add testing curl for each service
-
-Workspace: Collecting workspace informationHere is the updated readme.md file with instructions to run unit tests and testing `curl` commands for each service:
-
-```markdown
-# Go Microservices Project
-
-This project consists of three microservices: `auth-service`, `ws-service`, and `persistence-service`. These services communicate with each other using Kafka and a PostgreSQL database.
-
----
-
-## Prerequisites
-
-Before running the services, ensure you have the following installed:
-
-- [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
-- [Kubernetes](https://kubernetes.io/) (if using manifests)
-- [kubectl](https://kubernetes.io/docs/tasks/tools/)
-- [Minikube](https://minikube.sigs.k8s.io/docs/start/) or any Kubernetes cluster (if using manifests)
-- [Go](https://golang.org/) (if running locally)
-- [curl](https://curl.se/) (for testing APIs)
-
----
-
-## Running Services Without Manifests
-
-### 1. Start Dependencies Using Docker Compose
-
-Run the following command to start Kafka, Zookeeper, and Kafka UI:
-
-```bash
-docker-compose up -d
-```
 
 ### 2. Run `auth-service`
 
@@ -403,42 +367,7 @@ The `persistence-service` does not expose HTTP endpoints but listens to Kafka me
 - Ensure the `.env` files are properly configured for each service.
 - Kafka topics are automatically created as per the configuration.
 - Use Kafka UI (available at `http://localhost:8080`) to monitor Kafka topics and messages.
-```
 
-biktertech: ws service is using ws://localhost:8001/ws?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDcyMzcxMjksInVzZXJfaWQiOjIsInVzZXJuYW1lIjoiYW1tYWQifQ.x0LXqHi-2FuBbVTk-Bnewa-ru-MjiSWdgpCepvK7Kgg this type of curl
-
-GitHub Copilot: Here is the updated readme.md file with the correct `curl` command for the ws-service:
-
-```markdown
-# Go Microservices Project
-
-This project consists of three microservices: `auth-service`, `ws-service`, and `persistence-service`. These services communicate with each other using Kafka and a PostgreSQL database.
-
----
-
-## Prerequisites
-
-Before running the services, ensure you have the following installed:
-
-- [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
-- [Kubernetes](https://kubernetes.io/) (if using manifests)
-- [kubectl](https://kubernetes.io/docs/tasks/tools/)
-- [Minikube](https://minikube.sigs.k8s.io/docs/start/) or any Kubernetes cluster (if using manifests)
-- [Go](https://golang.org/) (if running locally)
-- [curl](https://curl.se/) (for testing APIs)
-
----
-
-## Running Services Without Manifests
-
-### 1. Start Dependencies Using Docker Compose
-
-Run the following command to start Kafka, Zookeeper, and Kafka UI:
-
-```bash
-docker-compose up -d
-```
 
 ### 2. Run `auth-service`
 
