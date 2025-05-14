@@ -3,4 +3,5 @@ go 1.23.9
 use (
 	./auth-service
 	./ws-service
+	./persistence-service
 )
